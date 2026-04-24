@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybór stacji</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Wybierz stację pomiarową</h2>
+
+<div class="container">
+    <select id="province">
+        <option value="">Województwo</option>
+    </select>
+
+    <select id="district" disabled>
+        <option value="">Powiat</option>
+    </select>
+
+    <select id="commune" disabled>
+        <option value="">Gmina</option>
+    </select>
+
+    <select id="station" disabled>
+        <option value="">Stacja</option>
+    </select>
+</div>
+
+<div id="result">
+    <h3>Wybrana stacja:</h3>
+    <p id="output">Brak wyboru</p>
+</div>
+
+<div id="available-measurements">
+    <h3>Wybrana stacja wykonuje pomiary:</h3>
+    <p id="measurements-list">Brak wybranej stacji</p>
+</div>
+
+<div>
+    <h3>Zakres danych:</h3>
+    <select id="rangeSelect">
+        <option value="">Wybierz zakres</option>
+        <option value="24h">24h</option>
+        <option value="3d">3 dni</option>
+        <option value="7d">7 dni</option>
+        <option value="21d">21 dni</option>
+    </select>
+</div>
+
+<div>
+    <h3>Dane dla pomiaru:</h3>
+    <select id="sensorSelect" disabled>
+        <option value="">Wybierz pomiar</option>
+    </select>
+</div>
+
+<div>
+    <h3>Statystyki:</h3>
+    <p>Min: <span id="minValue">-</span></p>
+    <p>Max: <span id="maxValue">-</span></p>
+</div>
+
+<div>
+    <h3>Wykres pomiarów:</h3>
+    <canvas id="measurementChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
